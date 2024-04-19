@@ -65,7 +65,7 @@ nav a {
   padding: 10px;
 }
 
-nav svg {
+.open-sidebar-button {
   fill: #ddc398;
   margin-left: 90%;
 }
@@ -80,9 +80,7 @@ nav svg {
 }
 
 @media (max-width: 450px) {
-  .open-sidebar-button {
-      position: relative;
-  }
+
 
   .links {
       display: flex;
@@ -90,6 +88,9 @@ nav svg {
   }
 
   .links-container {
+    .logo{
+      display: NONE;
+    }
       display: none;
       flex-direction: column;
       align-items: flex-start;
@@ -97,7 +98,7 @@ nav svg {
       top: 0;
       right: 0;
       margin-right: 0;
-      z-index: 10;
+      z-index: 100;
       width: 300px;
       background-color: #141312;
       box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
