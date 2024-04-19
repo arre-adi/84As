@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'gardena';
+  src: url(srcs/gardena-holmes-gardena-holmes-serif-400.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141312;
+  background-size: cover;
+  background-position: center;
+}
+
+/* header */
+.nav {
+  width: 100%;
+  height: 60px;
+  margin: 20px 10px 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ddc398;
+  padding: 0 10px;
+}
+
+.logo-buttons {
+  height: 100%;
+  display: flex;
+  padding: 0px;
+  align-items: center;
+  text-decoration: none;
+  color: #ddc398;
+}
+
+.logo {
+  font-size: 60px;
+  font-family: 'gardena';
+  font-weight: 400;
+  margin-right: auto;
+  padding: 10px;
+}
+
+nav svg {
+  fill: #ddc398; /* corrected fill property */
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .open-sidebar-button {
+      position: relative;
+  }
+
+  .links {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .links-container {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      width: 300px;
+      background-color: #141312;
+      box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+      transition: 0.75s ease-out;
+  }
+
+  nav a {
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      padding: 20px 30px;
+      justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+      display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+      display: flex;
+  }
+}
