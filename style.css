@@ -79,6 +79,12 @@ nav a {
   display: none;
 }
 
+.mobile-view-logo {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 @media (max-width: 450px) {
 
 
@@ -117,8 +123,17 @@ nav a {
   .close-sidebar-button {
       display: block;
   }
+  
 
   #sidebar-active:checked ~ .links-container {
       display: flex;
+  }
+
+  .mobile-view-logo a{
+    font-family: 'gardena';
+    margin-left: 10px;
+    font-size: 30px;
+    visibility: visible;
+    padding: 0;
   }
 }
