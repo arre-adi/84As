@@ -66,7 +66,8 @@ nav a {
 }
 
 nav svg {
-  fill: #ddc398; /* corrected fill property */
+  fill: #ddc398;
+  margin-left: 90%;
 }
 
 #sidebar-active {
@@ -95,6 +96,7 @@ nav svg {
       position: fixed;
       top: 0;
       right: 0;
+      margin-right: 0;
       z-index: 10;
       width: 300px;
       background-color: #141312;
