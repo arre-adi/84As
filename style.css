@@ -3,6 +3,10 @@
   src: url(srcs/gardena-holmes-gardena-holmes-serif-400.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'gestack';
+  src: url(srcs/gestack-gestack-400.ttf) format('truetype');
+}
 * {
   margin: 0;
   padding: 0;
@@ -85,6 +89,39 @@ nav a {
   height: 0;
 }
 
+
+
+.owl-carousel {
+  width: 95%; /* Adjust the width of the carousel */
+  max-width: 1400px; /* Optionally limit the maximum width */
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+.owl-carousel .item {
+  perspective: 1000px; /* Set perspective for 3D effect */
+  position: relative;
+}
+
+.owl-carousel .item img {
+  transition: transform 0.5s; /* Add transition effect to transform property */
+}
+
+.owl-carousel .item:hover img {
+  transform: scale(1.1) rotateY(11deg); /* Apply scale and rotation on hover */
+}
+
+
+
+
+
+
+/* -------------------- */
+h1{
+  font-size: 4vw;
+  font-family: 'gestack';
+  font-weight: 200;
+  margin: 30px 0px 40px 20px;
+  color: #ddc398;
+}
 @media (max-width: 450px) {
 
 
