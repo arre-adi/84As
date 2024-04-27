@@ -2,16 +2,48 @@
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: center; /* Horizontally center the container */
-  align-items: center; /* Vertically center the content within the container (optional) */
+  align-items: center; 
   width: 70%; /* Adjust width as needed */
   margin: 40px auto; /* Add margin for spacing */
+  padding: 0px;
 }
 
 .product-container img {
-  padding: 20px;
-  width: 20vw; /* Adjust width as needed */
+  padding: 20px 20px 15px 20px;
+  width: 20vw;
   height: auto;
 }
+
+
+.product{
+  justify-content: center;
+  align-items: center;
+}
+
+.product-info{
+  
+  background-image: linear-gradient(to right bottom, #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
+  border-radius: 10px;
+  margin: 0px 20px 0px 20px;
+}
+.product-title{
+  color:#141312;
+  font-family: "Anek Devanagari", sans-serif;
+  font-weight: 500;
+  font-size: Larg;
+  padding: 5px;
+  text-align: center;
+}
+
+.price{
+  color:#141312;
+  font-family: "Anek Devanagari", sans-serif;
+  font-weight: 100;
+  font-size: medium;
+  padding: 4px;
+  text-align: center; 
+}
+
 
 
 @media (max-width: 480px) {
@@ -19,10 +51,18 @@
     width: 80%; /* Make container full width on small screens */
     margin: 40px auto; /* Maintain horizontal centering */
     flex-wrap: none; /* Disable wrapping for single-column layout */
+    padding: 0px;
   }
 
   .product-container img {
     padding: 10px;
-    min-width: 30vw; /* Example, adjust based on desired image size */
+    min-width: 40vw; /* Example, adjust based on desired image size */
+  }
+
+  .product-info{
+  
+    background-image: linear-gradient(to right bottom, #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
   }
 }

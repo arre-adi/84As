@@ -36,11 +36,11 @@ body {
 }
 
 .logo {
-  font-size: 60px;
+  font-size: 50px;
   font-family: 'gardena';
   font-weight: 400;
   margin-right: auto;
-  padding: 10px;
+  padding: 30px 10px 10px 10px;
 }
 
 .logo a{
@@ -211,11 +211,13 @@ h1 a:hover{
 
   .open-sidebar-button,
   .close-sidebar-button {
+    padding: 10px;
       display: block;
   }
   
 
   #sidebar-active:checked ~ .links-container {
+    padding: 20px;
       display: flex;
   }
 
@@ -224,7 +226,7 @@ h1 a:hover{
     margin-left: 10px;
     font-size: 30px;
     visibility: visible;
-    padding: 0;
+    padding: 10px;
   }
 }
 
