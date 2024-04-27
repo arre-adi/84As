@@ -40,7 +40,7 @@ $(document).ready(function() {
           }
       },
       autoplay: true, // Enable autoplay
-      autoplayTimeout: 3000, // Set autoplay timeout (milliseconds)
+      autoplayTimeout: 2500, // Set autoplay timeout (milliseconds)
       autoplayHoverPause: true // Pause autoplay on hover
   });
 
