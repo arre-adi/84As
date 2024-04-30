@@ -1,0 +1,187 @@
+body {
+  background-image: linear-gradient(to right bottom, #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.container{
+  width: 60%;
+  margin: 40px auto;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left{
+  max-width: 40%;
+  justify-content: space-between;
+}
+
+.slide{
+  max-width: 100%;
+}
+
+.option{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.option img {
+  max-width:25%; 
+  height: auto;
+  padding: 5px;
+}
+
+
+.right{
+  max-width: 100%;
+  margin: 20px 10px 10px 50px;
+}
+
+.right h1{
+  font-family:"gothic" ,sans-serif;
+  color: #141312;
+  font-size: 3em;
+  font-weight: 600;
+}
+.rating{
+  margin-top: 5px;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  border-bottom: 1px   solid black;
+}
+.price-box {
+  font-family:"gothic" ,sans-serif;
+  margin: 20px 10px 10px 0;
+}
+
+.right p1 {
+  text-decoration: line-through;
+  color: #474646;
+  font-size:0.5em;
+  font-weight:100;
+}
+.right h3{
+  color: #141312;
+  margin-top: 5px;
+  font-size: 3em;
+}
+
+.right h5{
+  color: #141312;
+  font-size: 1.2em;
+}
+
+.right h4{
+  font-family:"gothic" ,sans-serif;
+  text-align: center;
+  margin: 50px 0  20px 0;
+  color: #141312;
+  font-size: 1.5em;
+}
+
+.color-option {
+    display: flex;
+  justify-content: center;
+}
+.color-option label input{
+  display: none;
+}
+
+.color-option span{
+  display: inline-block;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 8px 40px 8px;
+}
+
+.lavender{
+  background-color:#e5e0e1;
+  border: 1px solid black;
+  
+}
+.purple{
+  background-color:#d6cecf;
+}
+.pink{
+  background-color:#FDF5F8;
+}
+.blue{
+  background-color:#aaccff;
+}
+.white{
+  background-color:#ffffff;
+}
+.mint{
+  background-color:#98FF98;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.incdec{
+  font-family:"gothic" ,sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.box{
+  font-family:"gothic" ,sans-serif;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin-left: 7px;
+}
+.incdec h5{
+  font-size: large;
+}
+
+.incdec input {
+  width: 50px;
+  text-align: center; 
+  border: none; 
+  padding: 5px; 
+  border-radius: 3px; 
+}
+.incdec svg{
+  border:none;
+  padding: 5px;
+}
+.add-to-cart button {
+  background-color: #fa4362;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.add-to-cart i {
+  margin-left: 10px;
+  color: #ffffff;
+}
