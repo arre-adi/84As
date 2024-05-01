@@ -9,7 +9,7 @@ body {
 .product-container {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: space-between; /* Horizontally center the container */
+  justify-content: flex-start; /* Horizontally center the container */
   align-items: center; 
   width: 70%; /* Adjust width as needed */
   margin: 40px auto; /* Add margin for spacing */

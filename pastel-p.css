@@ -100,16 +100,18 @@ body {
   margin: 2px 8px 40px 8px;
 }
 
-.lavender{
-  background-color:#e5e0e1;
-  border: 1px solid black;
-  
+.color-option span:hover{
+  border: 1px solid #141312;
 }
-.purple{
-  background-color:#d6cecf;
+
+.lavender{
+  background-color:#fcadd5;  
+}
+.wine{
+  background-color:#9d3149;
 }
 .pink{
-  background-color:#FDF5F8;
+  background-color:#f1c7c1;
 }
 .blue{
   background-color:#aaccff;
@@ -118,70 +120,83 @@ body {
   background-color:#ffffff;
 }
 .mint{
-  background-color:#98FF98;
+  background-color:#b1efbb;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .add-to-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.incdec{
   font-family:"gothic" ,sans-serif;
-  display: flex;
-  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #141312;
 }
 
-.box{
-  font-family:"gothic" ,sans-serif;
+.quantity{
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  padding: 5px;
-  margin-left: 7px;
-}
-.incdec h5{
-  font-size: large;
+  justify-content: space-evenly;
+  font-size: small;
 }
 
-.incdec input {
-  width: 50px;
-  text-align: center; 
-  border: none; 
-  padding: 5px; 
-  border-radius: 3px; 
+.quantity input{
+  width: 80px;
+  height: 40px;
+  margin: 0 0 0 10px;
+  background-color: transparent;
+  border: 1px solid rgba(52, 50, 50, 0.226);
+  border-radius:10px ;
+  text-align: center;
+  font-size: x-large;
+  font-family:"gothic" ,sans-serif; 
 }
-.incdec svg{
-  border:none;
-  padding: 5px;
-}
+
+
 .add-to-cart button {
-  background-color: #fa4362;
+  font-family:"gothic" ,sans-serif; 
+  background-color: #141312;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 15px 35px;
+  margin: 0 0 0 0px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-
-
-
-.add-to-cart i {
-  margin-left: 10px;
+.wishlist {
+  font-family:"gothic" ,sans-serif; 
+  background-color: #141312;
   color: #ffffff;
+  width: 100%;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 2px 2px 2px;
+}
+
+
+
+@media (max-width: 450px) {
+
+  .container{
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .left{
+    width:max-content;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .right{
+    width:100%;
+    height: auto;
+    margin: 10px auto;
+  }
 }
