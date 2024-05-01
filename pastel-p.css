@@ -5,7 +5,7 @@ body {
 }
 
 
-.container{
+.container {
   width: 60%;
   margin: 40px auto;
   align-items: flex-start;
@@ -13,84 +13,89 @@ body {
   justify-content: space-evenly;
 }
 
-.left{
+.left {
   max-width: 40%;
   justify-content: space-between;
 }
 
-.slide{
+.slide {
   max-width: 100%;
 }
 
-.option{
+.option {
   display: flex;
   max-width: 100%;
   justify-content: space-between;
 }
 
 .option img {
-  max-width:25%; 
+  max-width: 25%;
   height: auto;
   padding: 5px;
 }
 
 
-.right{
+.right {
   max-width: 100%;
   margin: 20px 10px 10px 50px;
 }
 
-.right h1{
-  font-family:"gothic" ,sans-serif;
+.right h1 {
+  font-family: "gothic", sans-serif;
   color: #141312;
   font-size: 3em;
   font-weight: 600;
 }
-.rating{
+
+.rating {
   margin-top: 5px;
   font-size: 1.5em;
   padding-bottom: 10px;
-  border-bottom: 1px   solid black;
+  border-bottom: 1px solid black;
 }
+
 .price-box {
-  font-family:"gothic" ,sans-serif;
+  font-family: "gothic", sans-serif;
   margin: 20px 10px 10px 0;
 }
 
 .right p1 {
   text-decoration: line-through;
   color: #474646;
-  font-size:0.5em;
-  font-weight:100;
+  font-size: 0.5em;
+  font-weight: 100;
 }
-.right h3{
+
+.right h3 {
   color: #141312;
   margin-top: 5px;
   font-size: 3em;
 }
 
-.right h5{
+.right h5 {
   color: #141312;
   font-size: 1.2em;
 }
 
-.right h4{
-  font-family:"gothic" ,sans-serif;
+.right h4 {
+  font-family: "gothic", sans-serif;
   text-align: center;
-  margin: 50px 0  20px 0;
+  margin: 50px 0 20px 0;
   color: #141312;
   font-size: 1.5em;
 }
 
 .color-option {
-    display: flex;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.color-option label input{
+
+.color-option label input {
   display: none;
 }
 
-.color-option span{
+.color-option span {
   display: inline-block;
   justify-content: center;
   cursor: pointer;
@@ -100,27 +105,32 @@ body {
   margin: 2px 8px 40px 8px;
 }
 
-.color-option span:hover{
+.color-option span:hover {
   border: 1px solid #141312;
 }
 
-.lavender{
-  background-color:#fcadd5;  
+.lavender {
+  background-color: #fcadd5;
 }
-.wine{
-  background-color:#9d3149;
+
+.wine {
+  background-color: #9d3149;
 }
-.pink{
-  background-color:#f1c7c1;
+
+.pink {
+  background-color: #f1c7c1;
 }
-.blue{
-  background-color:#aaccff;
+
+.blue {
+  background-color: #aaccff;
 }
-.white{
-  background-color:#ffffff;
+
+.white {
+  background-color: #ffffff;
 }
-.mint{
-  background-color:#b1efbb;
+
+.mint {
+  background-color: #b1efbb;
 }
 
 
@@ -128,36 +138,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family:"gothic" ,sans-serif;
+  font-family: "gothic", sans-serif;
   padding-bottom: 15px;
   border-bottom: 1px solid #141312;
 }
 
-.quantity{
+.quantity {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: small;
 }
 
-.quantity input{
+.quantity input {
   width: 80px;
   height: 40px;
   margin: 0 0 0 10px;
   background-color: transparent;
   border: 1px solid rgba(52, 50, 50, 0.226);
-  border-radius:10px ;
+  border-radius: 10px;
   text-align: center;
   font-size: x-large;
-  font-family:"gothic" ,sans-serif; 
+  font-family: "gothic", sans-serif;
 }
 
 
 .add-to-cart button {
-  font-family:"gothic" ,sans-serif; 
+  font-family: "gothic", sans-serif;
   background-color: #141312;
   color: #ffffff;
-  padding: 15px 35px;
+  padding: 5% 7%;
   margin: 0 0 0 0px;
   border: none;
   border-radius: 5px;
@@ -165,7 +175,7 @@ body {
 }
 
 .wishlist {
-  font-family:"gothic" ,sans-serif; 
+  font-family: "gothic", sans-serif;
   background-color: #141312;
   color: #ffffff;
   width: 100%;
@@ -180,7 +190,7 @@ body {
 
 @media (max-width: 450px) {
 
-  .container{
+  .container {
     width: 80%;
     height: auto;
     margin: 10px auto;
@@ -188,14 +198,15 @@ body {
     flex-direction: column;
 
   }
-  .left{
-    width:max-content;
+
+  .left {
+    max-width: 100%;
     height: auto;
     margin: 10px auto;
   }
 
-  .right{
-    width:100%;
+  .right {
+    max-width: 100%;
     height: auto;
     margin: 10px auto;
   }
