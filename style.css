@@ -13,13 +13,13 @@
   src: url(srcs/Century\ Gothic\ Std\ Regular.otf) format('truetype');
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
+@font-face{
+  font-family: 'fontspring';
+  src: url(srcs/Fontspring-DEMO-theseasons-bd.otf) format('truetype')
+}
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -82,7 +82,7 @@ body {
 .links {
   display: flex;
   align-items: center;
-  font-family: "gothic" ,sans-serif;
+  font-family: "gothic", sans-serif;
   font-weight: 400;
   font-size: medium;
 }
@@ -90,7 +90,7 @@ body {
 .links a {
   display: flex;
   align-items: center;
- font-family: "gothic" ,sans-serif;
+  font-family: "gothic", sans-serif;
   transition: all 0.3s ease-in-out;
 }
 
@@ -143,13 +143,61 @@ nav a {
 }
 
 
+
+
+/* --------------------------- */
+
+
+.section1{
+  background: #ddc398;
+  height: 500px;
+  align-content: center;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
+  
+}
+.section1 h1{
+  font-family: "fontspring";
+  margin-left: 50px;
+  color: #141312;
+}
+
+.section1 p{
+  width: 50%;
+  text-wrap: 40px;
+  overflow-wrap: break-word;
+  margin: 20px 0 0 50px;
+  font-family: "Gothic";
+  font-size: 1.1em;
+}
+.section1 a{
+  color: #141312;
+  text-decoration: none;
+}
+
+.section1 a:hover{
+  color: #141312;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.heading-combo{
+  display: flex;
+  align-items: baseline;
+}
+.section1 img{
+  width: 50px;
+}
+
+
 .arrivals h1,
 .collection h1 {
   position: relative;
-  font-size: 4vw;
-  font-family: 'gestack';
+  font-size: 2.5em;
+  font-family: "gardena";
   font-weight: 200;
-  margin: 40px 0px 40px 20px;
+  margin: 40px 0px 20px 80px;
   color: #ddc398;
 
 }
@@ -172,13 +220,12 @@ nav a {
 
 
 .owl-carousel {
-  width: 95%;
-  max-width: 1400px;
+  width: 87%;
+  max-width: 1300px;
   margin: 0 auto;/
 }
 
 .owl-carousel .item {
-  perspective: 1000px;
   position: relative;
 }
 
@@ -189,8 +236,6 @@ nav a {
 .owl-carousel .item:hover img {
   transform: scale(1.1) rotateY(11deg);
 }
-
-
 
 
 
@@ -252,6 +297,26 @@ nav a {
     visibility: visible;
     padding: 10px;
   }
+
+
+  .arrivals h1,
+.collection h1 {
+  font-size: 0.5em;
+ 
+  padding: 0px;
+}
+
+.arrivals h1 a,
+.collection h1 a {
+  font-size: 2.5em;
+
+}
+
+.arrivals h1 a:hover,
+.collection h1 a:hover {
+  font-size: 5em;
+  
+}
 }
 
 
@@ -268,7 +333,7 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "gothic" ,sans-serif;
+  font-family: "gothic", sans-serif;
 }
 
 .social-icon,
@@ -321,5 +386,3 @@ nav a {
   font-size: 1rem;
   font-weight: 300;
 }
-
-
