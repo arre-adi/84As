@@ -1,4 +1,3 @@
-
 body {
   background-image: linear-gradient(to right bottom, #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
   background-size: cover;
@@ -8,48 +7,53 @@ body {
 
 .product-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center; /* Horizontally center the container */
-  align-items: center; 
-  width: 70%; /* Adjust width as needed */
-  margin: 40px auto; /* Add margin for spacing */
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+  justify-content: center;
+  /* Horizontally center the container */
+  align-items: center;
+  width: 70%;
+  /* Adjust width as needed */
+  margin: 40px auto;
+  /* Add margin for spacing */
   padding: 0px;
   font-family: "gothic", sans-serif;
 }
 
-.product-container a{
+.product-container a {
   text-decoration: none;
 }
 
 
-.product{
+.product {
   max-width: 15em;
   padding: 1em;
 
 }
 
-.product:hover{
+.product:hover {
   border: 0.5px solid #141312a1;
-  
+
 }
 
-.product img{
+.product img {
   max-width: 100%;
 }
 
-.product h4{
+.product h4 {
   font-size: 1.2em;
   margin: 0.5em 0;
 }
-.product div{
+
+.product div {
   font-size: 1.1em;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 
 }
 
-.product button{
+.product button {
   border: none;
   font-size: 1.1em;
   background: transparent;
@@ -59,34 +63,38 @@ body {
 }
 
 .product button:hover {
-  color: rgb(239, 4, 4); /* Adjust hover color as desired */
+  color: rgb(239, 4, 4);
+  /* Adjust hover color as desired */
 }
 
 .product button.active i {
 
-  color: rgb(239, 4, 4);  /* Color of the heart when added to wishlist */
+  color: rgb(239, 4, 4);
+  /* Color of the heart when added to wishlist */
 }
 
 
 
 @media (max-width: 576px) {
   .product-container {
-    width: 80%; /* Make container full width on small screens */
-    margin: 2px auto; /* Maintain horizontal centering */
+    width: 80%;
+    /* Make container full width on small screens */
+    margin: 2px auto;
+    /* Maintain horizontal centering */
     flex-wrap: wrap;
     position: center;
   }
 
-  .product{
+  .product {
     max-width: 9em;
     padding: 1em;
   }
 
-  .product h4{
+  .product h4 {
     font-size: 1em;
   }
 
-  .product div{
+  .product div {
     font-size: 0.8em;
   }
 
@@ -94,16 +102,18 @@ body {
 
 @media (max-width: 349px) {
   .product-container {
-    width: 80%; /* Make container full width on small screens */
-    margin: 2px auto; /* Maintain horizontal centering */
+    width: 80%;
+    /* Make container full width on small screens */
+    margin: 2px auto;
+    /* Maintain horizontal centering */
     flex-wrap: wrap;
     position: center;
   }
 
-  .product{
+  .product {
     max-width: 8em;
     padding: 1em;
   }
- 
+
 
 }
