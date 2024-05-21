@@ -32,8 +32,25 @@ body {
   background-color: #141312;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
 }
 
+
+::-webkit-scrollbar {
+  width: 6px; 
+  background-color: #141312;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #ddc398;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
 
 /* header */
 .nav {
@@ -146,6 +163,71 @@ nav a {
 
 
 /* --------------------------- */
+.arrivals{
+  display: flex;
+  overflow-x:hidden;
+  width: 100%;
+  align-items: flex-start;
+  margin-left: -50px;
+}
+
+
+.item {
+  min-width: 25%;
+  padding: 1em;
+  color: #ddc398;
+  font-family: "Gothic";
+}
+
+.item:hover {
+  border: 0.5px solid #ddc398a1;
+}
+
+.item img {
+  max-width: 100%; /* This stays as a percentage for full-width images */
+}
+
+.item h4 {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 10px 0 0 0;
+}
+
+.item h5 {
+  font-size: 1em; /* Already in em */
+  margin: 10px 0 0 0;
+}
+
+.item div {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item button {
+  background-color: #ddc398;
+  color: #141312;
+  font-size: 1.25em; 
+  width: 2em; 
+  height: 2em; 
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+}
+
+.item button:hover {
+  background-color: #141312;
+  color: #ddc398;
+  border-color: #ddc398;
+  box-shadow: 0px 0px 0.125em #ddc398; /* Converted from 2px to 0.125em */
+}
+
+
+
+
+/* section */
 
 
 .section1{
@@ -161,6 +243,7 @@ nav a {
   font-family: "fontspring";
   margin-left: 50px;
   color: #141312;
+  font-size: 3em;
 }
 
 .section1 p{
@@ -202,6 +285,21 @@ nav a {
 
 }
 
+.arrivals h1{
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  transform-origin:center;
+  text-align: right;
+}
+
+.arrivals h6{
+  font-family: "Gothic";
+  transform: rotate(0deg);
+  writing-mode: vertical-rl;
+  transform-origin:center;
+  text-align: right;
+}
+
 .arrivals h1 a,
 .collection h1 a {
   text-decoration: none;
@@ -222,22 +320,26 @@ nav a {
 .owl-carousel {
   width: 87%;
   max-width: 1300px;
-  margin: 0 auto;/
+  margin: 0 20px auto;
 }
 
 .owl-carousel .item {
   position: relative;
 }
 
-.owl-carousel .item img {
-  transition: transform 0.5s;
+
+.owl-carousel .owl-dots .owl-dot span {
+  display: block;
+  border-radius: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #ddc398;
+  transition: background-color 0.3s ease;
 }
 
-.owl-carousel .item:hover img {
-  transform: scale(1.1) rotateY(11deg);
+.owl-carousel .owl-dots .owl-dot.active span {
+  background-color: #333;
 }
-
-
 
 
 
@@ -299,10 +401,39 @@ nav a {
   }
 
 
-  .arrivals h1,
+
+
+
+.section1{
+  background: #ddc398;
+  height: max-content;
+  align-content: center;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
+  
+}
+.section1 h1{
+  margin:auto;
+  font-size: 1.5em;
+}
+
+.section1 p{
+  width: 80%;
+  overflow-wrap:break-word;
+  margin: 8px 15px auto;
+  font-size: 0.8em;
+}
+
+
+.section1 img{
+  width: 2em;
+}
+
+
+.arrivals h1,
 .collection h1 {
   font-size: 0.5em;
- 
   padding: 0px;
 }
 
@@ -317,17 +448,33 @@ nav a {
   font-size: 5em;
   
 }
+
+.item button {
+  background-color: #ddc398;
+  color: #141312;
+  font-size: 0.8em; 
+  width: 1.5em; 
+  height: 1.5em; 
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+}
+
+
+
 }
 
 
 /* FOOTER */
 
 .footer {
-  position: relative;
+    position: relative;
   width: 100%;
   background: #ddc398;
   min-height: 100px;
   margin-top: 200px;
+  margin-bottom: 0px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
