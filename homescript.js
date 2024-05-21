@@ -38,9 +38,7 @@ $(document).ready(function () {
                 items: 3.5  
             }
         },
-        autoplay: true, 
-        autoplayTimeout: 25000, 
-        autoplayHoverPause: true 
+     
     });
 
   

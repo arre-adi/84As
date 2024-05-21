@@ -318,9 +318,8 @@ nav a {
 
 
 .owl-carousel {
-  width: 87%;
-  max-width: 1300px;
-  margin: 0 20px auto;
+  width: 100%;
+  max-width: 1500px;
 }
 
 .owl-carousel .item {
@@ -333,12 +332,13 @@ nav a {
   border-radius: 0px;
   width: 30px;
   height: 3px;
-  background-color: #ddc398;
+  background-color: #333;
   transition: background-color 0.3s ease;
 }
 
 .owl-carousel .owl-dots .owl-dot.active span {
-  background-color: #333;
+
+  background-color: #ddc398;
 }
 
 
