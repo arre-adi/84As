@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         // Autoplay
         autoplay: false,
-        goToFirst: true,
+        goToFirst: false,
         goToFirstSpeed: 2000,
 
         // Navigation
@@ -23,33 +23,20 @@ $(document).ready(function () {
 
         responsive: {
             0: {
-                items: 3
-            },
-            480: {
-                items: 3
+              items: 2  // 2 items on small screens
             },
             768: {
-                items: 3
-            },
-            992: {
-                items: 3
+              items: 3  // 3 items on medium screens
             },
             1200: {
-                items: 3.5  
+              items: 3  // 4 items on large screens (adjust if needed)
             }
-        },
+          }
+          
      
     });
 
-  
-    owl.on('mouseenter', function () {
-        owl.trigger('stop.owl.autoplay');
-    });
 
-  
-    owl.on('mouseleave', function () {
-        owl.trigger('play.owl.autoplay', [owl.data('owl.autoplay.timeout')]);
-    });
 });
 
 

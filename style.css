@@ -162,14 +162,15 @@ nav a {
 
 
 
-/* --------------------------- */
+/* ------------arrival--------------- */
 .arrivals{
   display: flex;
-  overflow-x:hidden;
+  overflow-x: hidden;
   width: 100%;
   align-items: flex-start;
   margin-left: -50px;
 }
+
 
 
 .item {
@@ -221,10 +222,77 @@ nav a {
   background-color: #141312;
   color: #ddc398;
   border-color: #ddc398;
-  box-shadow: 0px 0px 0.125em #ddc398; /* Converted from 2px to 0.125em */
+  box-shadow: 0px 0px 0.125em #ddc398; 
 }
 
 
+
+.arrivals h1,
+.collection-container h1 {
+  position: relative;
+  font-size: 2.5em;
+  font-family: "gardena";
+  font-weight: 200;
+  margin: 40px 0px 20px 80px;
+  color: #ddc398;
+
+}
+
+.arrivals h1{
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  transform-origin:center;
+  text-align: right;
+}
+
+.arrivals h6{
+  font-family: "Gothic";
+  transform: rotate(0deg);
+  writing-mode: vertical-rl;
+  transform-origin:center;
+  text-align: right;
+}
+
+.arrivals h1 a,
+.ccollection-container h1 a {
+  text-decoration: none;
+  color: #ddc398;
+}
+
+.arrivals h1 a:hover,
+.collection-container h1 a:hover {
+  text-decoration: none;
+  color: #ddc398;
+}
+
+
+
+/* ------Products Corousel---- */
+
+
+.owl-carousel {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.owl-carousel .item {
+  position: relative;
+}
+
+
+.owl-carousel .owl-dots .owl-dot span {
+  display: block;
+  border-radius: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span {
+
+  background-color: #ddc398;
+}
 
 
 /* section */
@@ -274,73 +342,108 @@ nav a {
 }
 
 
-.arrivals h1,
-.collection h1 {
-  position: relative;
-  font-size: 2.5em;
-  font-family: "gardena";
-  font-weight: 200;
-  margin: 40px 0px 20px 80px;
-  color: #ddc398;
 
+
+/* Collection */
+
+.collection-container {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+  width: 90%;
+  margin: 40px auto;
+  padding: 0;
 }
 
-.arrivals h1{
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30% );
+  grid-template-rows: repeat(19, 5vh);
+  gap: 16px;
+  justify-content: center;
+  align-content: center;
+  align-self: center; 
+}
+
+.grid-item {
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:#141312;
+  background-blend-mode: hard-light;
+  transition: 0.3s;
+}
+
+.grid img{
+  width: 100%;
+}
+.grid-item:hover{
+  box-shadow: 0 0  10px #ddc39851; /* Shadow properties */
+}
+.grid img:hover{
+  opacity: 0.1; 
+}
+
+.heading{ 
+  min-height:30%;
+  position: absolute;
+  padding: 20px  0 20px 0 ;
+  font-size: 2em;
+  font-weight: 500;
+  color: #ddc398;
+  background-image: linear-gradient(to top, #0000004d, #0000004d,  #0000004d, #ffffff00);
+  writing-mode:vertical-lr;
+  transform-origin:bottom;
+  font-family: "gardena";
+
   transform: rotate(180deg);
   writing-mode: vertical-rl;
   transform-origin:center;
   text-align: right;
-}
-
-.arrivals h6{
-  font-family: "Gothic";
-  transform: rotate(0deg);
-  writing-mode: vertical-rl;
-  transform-origin:center;
-  text-align: right;
-}
-
-.arrivals h1 a,
-.collection h1 a {
-  text-decoration: none;
-  color: #ddc398;
-}
-
-.arrivals h1 a:hover,
-.collection h1 a:hover {
-  text-decoration: none;
-  color: #ddc398;
+  
 }
 
 
-
-/* ------Products Corousel---- */
-
-
-.owl-carousel {
-  width: 100%;
-  max-width: 1500px;
+.item-01 {
+  grid-column: span 1;
+  grid-row: span 8 ;
 }
 
-.owl-carousel .item {
-  position: relative;
+.item-02 {
+  grid-column: span 2;
+  grid-row: span 6;
+}
+
+.item-03 {
+  grid-column: span 1;
+  grid-row: span 8;
+}
+
+.item-04 {
+  grid-column: span 1;
+  grid-row: span 5;
+}
+
+.item-05 {
+  grid-column: span 1;
+  grid-row: span 6;
+}
+.item-06 {
+  grid-column: span 1;
+  grid-row: span 8;
+}
+.item-07{
+  grid-column: span 2;
+  grid-row: span 5;
 }
 
 
-.owl-carousel .owl-dots .owl-dot span {
-  display: block;
-  border-radius: 0px;
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  transition: background-color 0.3s ease;
-}
 
-.owl-carousel .owl-dots .owl-dot.active span {
 
-  background-color: #ddc398;
-}
-
+  
+  
+  
 
 
 
@@ -414,37 +517,39 @@ nav a {
   
 }
 .section1 h1{
-  margin:auto;
-  font-size: 1.5em;
+  margin:auto 8px ;
+  font-size: 1.4em;
 }
 
 .section1 p{
   width: 80%;
   overflow-wrap:break-word;
-  margin: 8px 15px auto;
+  text-align: justify;
+  margin: 10px 8px ;
   font-size: 0.8em;
+  margin-bottom: 2px;
 }
 
 
 .section1 img{
-  width: 2em;
+  width: 1.5em;
 }
 
 
 .arrivals h1,
-.collection h1 {
+.collection-container h1 {
   font-size: 0.5em;
   padding: 0px;
 }
 
 .arrivals h1 a,
-.collection h1 a {
+.collection-container h1 a {
   font-size: 2.5em;
 
 }
 
 .arrivals h1 a:hover,
-.collection h1 a:hover {
+.collection-container h1 a:hover {
   font-size: 5em;
   
 }
@@ -462,25 +567,50 @@ nav a {
 }
 
 
+.arrivals h6 {
+  font-size: 0.6em;
+}
 
+
+
+.collection-container {
+  margin:-200px auto ;
+  width: 90%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30% );
+  grid-template-rows: repeat(19, 0.5%);
+  gap: 16px;
+  justify-content: center;
+}
+
+.heading{ 
+  min-height:10%;
+  position: absolute;
+  padding: 20px  0 0 0 ;
+  font-size: 0.5em;
+  font-weight: 500;
+}
 }
 
 
 /* FOOTER */
 
 .footer {
-    position: relative;
+  position: relative;
   width: 100%;
   background: #ddc398;
   min-height: 100px;
-  margin-top: 200px;
-  margin-bottom: 0px;
+  margin-top: 10px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "gothic", sans-serif;
+ 
 }
 
 .social-icon,
