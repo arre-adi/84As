@@ -1,20 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product</title>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="cart.css">
 </head>
-
 <body>
+
+  
   <nav>
     <input type="checkbox" id="sidebar-active">
     <div class="mobile-view-logo">
@@ -44,7 +41,7 @@
         <a href="index.html">HOME</a>
         <a href="product.html">PRODUCTS</a>
         <a href="collection.html">COLLECTION</a>
-        <a href="about.html">ABOUT</a>
+        <a href="">ABOUT</a>
 
         <div class="logo-buttons">
           <a href="cart.html">
@@ -79,37 +76,115 @@
     </div>
   </nav>
 
-
-  <h1>LOOKS EMPTY</h1>
+  <main>
+    <div class="cart">
+      <h1>YOUR BAG</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Products</th>
+            <th>Color</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+    </div>
+    <div class="summary">
+      <h2>Order Summary</h2>
+      <div class="summary-item"><span id="product-count">0 Products</span><span id="total-price">0€</span></div>
+      <div class="summary-item"><span>Shipping</span><span>₹5</span></div>
+      <div class="total"><span>Total</span><span id="grand-total">₹5</span></div>
+      <button class="checkout">Checkout</button>
+    </div>
+  </main>
 
 
 
   <footer class="footer">
-
     <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <i class="fa-brands fa-linkedin"></i>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-          <i class="fa-brands fa-instagram"></i>
-        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#"><i class="fa-brands fa-instagram"></i></a></li>
     </ul>
+
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="#">About</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-
     </ul>
     <p>&copy; 84A's Creative Studio | All Rights Reserved</p>
   </footer>
 
-</body>
 
+  
+  <script>
+    function updateCart() {
+      const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+      const cartItemsContainer = document.getElementById('cart-items');
+      cartItemsContainer.innerHTML = '';
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        const itemRow = document.createElement('tr');
+        itemRow.innerHTML = `
+          <td><img src="${item.imgSrc}" alt="${item.name}" style="width: 100px;"></td>
+          <td>${item.color}</td>
+          <td><input type="number" value="${item.quantity}" min="0" class="quantity-input" data-index="${index}"></td>
+          <td>₹${item.price * item.quantity}</td>
+          <td><button class="delete" data-index="${index}">×</button></td>
+        `;
+        cartItemsContainer.appendChild(itemRow);
+        total += item.price * item.quantity;
+      });
+
+      document.getElementById('product-count').textContent = `${cart.length} Products`;
+      document.getElementById('total-price').textContent = `₹${total}`;
+      document.getElementById('grand-total').textContent = `₹${total + 5}`;
+
+      // Update quantity on input change
+      document.querySelectorAll('.quantity-input').forEach(input => {
+        input.addEventListener('input', validateQuantity);
+        input.addEventListener('change', updateQuantity);
+      });
+
+      // Remove item on delete button click
+      document.querySelectorAll('.delete').forEach(button => {
+        button.addEventListener('click', removeItem);
+      });
+    }
+
+    function validateQuantity(event) {
+      const input = event.target;
+      const value = parseInt(input.value);
+
+      if (value < 0 || isNaN(value)) {
+        input.value = 0;
+      }
+    }
+
+    function updateQuantity(event) {
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      const index = event.target.dataset.index;
+      const newQuantity = parseInt(event.target.value);
+      cart[index].quantity = newQuantity;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCart();
+    }
+
+    function removeItem(event) {
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      const index = event.target.dataset.index;
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCart();
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCart);
+  </script>
+</body>
 </html>

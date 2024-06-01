@@ -1,6 +1,235 @@
-h1 {
-    margin: 300px auto;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Gothic";
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+    margin: 80px 0;
+}
+
+.cart {
+    font-family: "Gothic";
+    width: 65%;
+}
+
+.cart h1 {
+    font-family: "fontspring";
+    font-size: 3em;
+    margin: 0px 0px 50px 30px;
+    color: #141312;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+th,
+td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #dcdcdc;
     text-align: center;
-    font-family: "gothic", sans-serif;
-    color: #ddc398;
+}
+
+th {
+    font-size: 1.1em;
+}
+
+td {
+    font-size: 1.2em;
+}
+
+td img {
+    width: 10em;
+    height: auto;
+    align-self: center;
+}
+
+input {
+    width: 3em;
+    padding: 0.3em;
+    background-color: transparent;
+    border: 1px solid rgba(52, 50, 50, 0.226);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Gothic";
+}
+
+input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button.delete {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #141312;
+    font-size: 1.5em;
+    align-self: center;
+}
+
+.summary {
+    width: 30%;
+    height: fit-content;
+    border: 1px solid #14131264;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.summary h2 {
+    font-size: 1.8em;
+    padding: 40px 0px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    border-top: 1px solid #dcdcdc;
+    padding: 30px 0;
+}
+
+button.checkout {
+    font-family: "Gothic";
+    width: 100%;
+    margin: 40px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #141312;
+    color: #fff;
+    font-size: 2empx;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 10px auto ;
+        padding: 10px;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+
+    .cart h1 {
+        font-family: "fontspring";
+        font-size: 2em;
+        margin:20px 0;
+    }
+    
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: none;
+    }
+    
+    th,
+    td {
+       
+        text-align: left;
+        border-bottom: 1px solid #dcdcdc;
+        text-align: center;
+    }
+    
+    th {
+        padding: 0.8em;
+        font-size: 0.9em;
+        font-weight: 100;
+    }
+    
+    td {
+        font-size: 0.8em;
+        padding: 0.4em;
+    }
+    
+    td img {
+        max-width: 5em;
+        height:auto ;
+        align-self: center;
+    }
+    
+
+    .summary {
+        width: 100%;
+        border: none;
+        margin-top: 30px;
+        padding: 10px;
+    }
+    
+    .summary h2 {
+        font-size: 1.2em;
+        padding:  20px 0 20px 0px;
+    }
+    
+    
+    
+    .total {
+        font-size:1.2em;
+        padding: 10px 0;
+    }
+    
+    button.checkout {
+        width: 100%;
+        margin: 30px 0px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #141312;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
 }
