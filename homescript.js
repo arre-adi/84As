@@ -1,35 +1,36 @@
 $(document).ready(function () {
-    var owl = $(".owl-carousel"); // Define the owl variable
+    var owl = $(".owl-carousel-1"); // Define the owl variable
 
     owl.owlCarousel({
-        dots: true,
+        dots: true, 
         loop: false,
         // Basic Speeds
-        slideSpeed: 2000,
-        paginationSpeed: 2000,
+        slideSpeed: 1000,
+        paginationSpeed: 1000,
 
         // Autoplay
         autoplay: false,
         goToFirst: false,
-        goToFirstSpeed: 2000,
+        goToFirstSpeed: 500,
 
         // Navigation
         navigation: true,
         navigationText: ["prev", "next"],
-        pagination: true,
-        paginationNumbers: true,
+        pagination: false,
+        paginationNumbers: false,
+
 
         dotsEach: 1, 
 
         responsive: {
             0: {
-              items: 2  // 2 items on small screens
+              items: 2.7  // 2 items on small screens
             },
             768: {
-              items: 3  // 3 items on medium screens
+              items: 3.5  // 3 items on medium screens
             },
             1200: {
-              items: 3  // 4 items on large screens (adjust if needed)
+              items: 3.6 // 4 items on large screens (adjust if needed)
             }
           }
           
@@ -38,6 +39,7 @@ $(document).ready(function () {
 
 
 });
+
 
 
 

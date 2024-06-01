@@ -2,6 +2,8 @@ body {
   background-image: linear-gradient(to right bottom, #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
   background-size: cover;
   background-position: center;
+  font-family: "gothic", sans-serif;
+
 }
 
 
@@ -41,21 +43,19 @@ body {
 }
 
 .right h1 {
-  font-family: "gothic", sans-serif;
   color: #141312;
   font-size: 3em;
   font-weight: 600;
 }
 
-.rating {
+.w-code {
   margin-top: 5px;
-  font-size: 1.5em;
+  font-size: 1em;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
 
 .price-box {
-  font-family: "gothic", sans-serif;
   margin: 20px 10px 10px 0;
 }
 
@@ -68,6 +68,7 @@ body {
 
 .right h3 {
   color: #141312;
+  font-weight: 200;
   margin-top: 5px;
   font-size: 3em;
 }
@@ -78,7 +79,6 @@ body {
 }
 
 .right h4 {
-  font-family: "gothic", sans-serif;
   text-align: center;
   margin: 50px 0 20px 0;
   color: #141312;

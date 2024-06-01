@@ -5,6 +5,8 @@ body {
 }
 
 
+
+
 .product-container {
   display: flex;
   flex-wrap: wrap;
@@ -37,12 +39,19 @@ body {
   max-width: 100%;
 }
 
-.product h4 {
+.prod-name{
+  display: flex;
+  flex-direction: row;
+}
+.prod-name h4 {
   font-size: 1.2em;
   margin: 0.5em 0;
 }
 
-.product div {
+
+
+
+.price {
   font-size: 1.1em;
   display: flex;
   justify-content: space-between;
@@ -61,18 +70,84 @@ body {
 
 .product button:hover {
   color: rgb(239, 4, 4);
-  /* Adjust hover color as desired */
 }
 
 .product button.active i {
 
   color: rgb(239, 4, 4);
-  /* Color of the heart when added to wishlist */
 }
 
 
 
-@media (max-width: 576px) {
+/* Color option */
+.color-options {
+  display: flex;
+  align-items: center;
+  justify-content:right;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin: 0;
+}
+
+.circle {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  position: relative;
+  margin-left: -10px; 
+}
+
+
+.circle::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.circle:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lavender {
+background-color: #fcadd5;
+}
+
+.wine {
+background-color: #9d3149;
+}
+
+.pink {
+background-color: #f1c7c1;
+}
+
+.blue {
+background-color: #aaccff;
+}
+
+.white {
+background-color: #ffffff;
+}
+
+.mint {
+background-color: #b1efbb;
+}
+
+
+
+@media (max-width: 450px) {
   .product-container {
     width: 80%;
     /* Make container full width on small screens */
@@ -95,14 +170,16 @@ body {
     font-size: 0.8em;
   }
 
+  .circle {
+    margin-left: -5px; 
+  }   
+
 }
 
-@media (max-width: 349px) {
+/* @media (max-width: 349px) {
   .product-container {
     width: 80%;
-    /* Make container full width on small screens */
     margin: 2px auto;
-    /* Maintain horizontal centering */
     flex-wrap: wrap;
     position: center;
   }
@@ -112,5 +189,8 @@ body {
     padding: 1em;
   }
 
+  .circle {
+    margin-left: -1px; 
+  }
 
-}
+} */

@@ -92,73 +92,55 @@
         </div>
       </div>
       <div class="right">
-
-
-
         <h1>PASTEL VASE</h1>
-        <div class="rating">
-          4.1 <i class="fa-solid fa-star"></i>
+        <div class="w-code">
+          PT-8455
         </div>
         <div class="price-box">
           <h3>₹299 <p1>₹699</p1>
           </h3>
           <h5>Inclusive of all taxes</h5>
         </div>
-
-
-
         <h4>COLOR<br></h4>
         <div class="color-option">
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
-            <span class="lavender"  onclick="img(srcs/IMG_E2193.JPG)" ></span>
+          <label>
+            <input type="radio" name="color" value="lavender" data-img-src="srcs/IMG_E2193.JPG">
+            <span class="lavender" onclick="img('srcs/IMG_E2193.JPG')"></span>
           </label>
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
+          <label>
+            <input type="radio" name="color" value="white"  data-img-src="srcs/IMG_E2198.JPG">
             <span class="white" onclick="img('srcs/IMG_2198.JPG')"></span>
           </label>
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
+          <label>
+            <input type="radio" name="color" value="mint"  data-img-src="srcs/IMG_E2195.JPG">
             <span class="mint" onclick="img('srcs/IMG_E2195.JPG')"></span>
           </label>
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
+          <label>
+            <input type="radio" name="color" value="wine"  data-img-src="srcs/IMG_E2194.JPG">
             <span class="wine" onclick="img('srcs/IMG_E2194.JPG')"></span>
           </label>
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
+          <label>
+            <input type="radio" name="color" value="pink"  data-img-src="srcs/IMG_2197.JPG">
             <span class="pink" onclick="img('srcs/IMG_2197.JPG')"></span>
           </label>
-
-          <label for="red">
-            <input type="radio" name="red" id="red">
-            <span class="blue"  onclick="img('srcs/IMG_E2196.JPG')"></span>
+          <label>
+            <input type="radio" name="color" value="blue"  data-img-src="srcs/IMG_E2196.JPG">
+            <span class="blue" onclick="img('srcs/IMG_E2196.JPG')"></span>
           </label>
         </div>
-
-
-
         <div class="add-to-cart">
           <div class="quantity">
             <h5>Quantity:</h5>
-            <input type="text" value="1" />
+            <input type="text" id="quantity" value="1" />
           </div>
-          <button type="submit">ADD TO CART</button>
+          <button type="submit" id="add-to-cart">ADD TO CART</button>
         </div>
         <button class="wishlist" type="submit">ADD TO WISHLIST</button>
       </div>
     </div>
   </section>
 
-
-
   <footer class="footer">
-
     <ul class="social-icon">
       <li class="social-icon__item"><a class="social-icon__link" href="#">
           <i class="fa-brands fa-facebook-f"></i>
@@ -178,10 +160,10 @@
       <li class="menu__item"><a class="menu__link" href="#">About</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-
     </ul>
     <p>&copy; 84A's Creative Studio | All Rights Reserved</p>
   </footer>
+  
   <!-- scripts -->
   <script>
     function img(anything) {
@@ -192,6 +174,26 @@
       const line = document.querySelector('.home');
       line.style.background = change;
     }
+
+    document.getElementById('add-to-cart').addEventListener('click', function() {
+  const quantity = document.getElementById('quantity').value;
+  const selectedColor = document.querySelector('input[name="color"]:checked');
+  const color = selectedColor.value;
+  const imgSrc = selectedColor.getAttribute('data-img-src'); // Capture the image source
+  const product = {
+    imgSrc: imgSrc, // Include the imgSrc property
+    quantity: quantity,
+    color: color,
+    price: 299
+  };
+
+  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  cart.push(product);
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  window.location.href = 'cart.html';
+});
+
   </script>
 </body>
 

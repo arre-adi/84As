@@ -160,6 +160,32 @@ nav a {
 }
 
 
+.whatsapp-icon1 {
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  bottom: 40px;
+  right: 40px;
+  background-color: #ddc398;
+  color:#fff;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.496);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon1:hover {
+  background: #141312;
+  color: #ddc398;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.496);
+  text-decoration: none;
+}
 
 
 /* ------------arrival--------------- */
@@ -171,7 +197,27 @@ nav a {
   margin-left: -50px;
 }
 
+.arrival-h{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  writing-mode: vertical-lr;
+  text-align: center;
+  transform: rotate(180deg);
+}
 
+.arrival-h button{
+  background-color: transparent;
+  color: #ddc398;
+  padding: 2px -4px 2px 2px;
+  font-size: 0.8em; 
+  width: 3em; 
+  height: 1.5em; 
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;  
+}
 
 .item {
   min-width: 25%;
@@ -185,7 +231,7 @@ nav a {
 }
 
 .item img {
-  max-width: 100%; /* This stays as a percentage for full-width images */
+  max-width: 100%;  
 }
 
 .item h4 {
@@ -206,7 +252,7 @@ nav a {
   align-items: center;
 }
 
-.item button {
+.item button{
   background-color: #ddc398;
   color: #141312;
   font-size: 1.25em; 
@@ -226,8 +272,16 @@ nav a {
 }
 
 
+.arrival-h h1{
+  position: relative;
+  font-size: 2.5em;
+  font-family: "gardena";
+  font-weight: 200;
+  margin: 40px 40px 20px 0;
+  color: #ddc398;
+}
 
-.arrivals h1,
+
 .collection-container h1 {
   position: relative;
   font-size: 2.5em;
@@ -235,22 +289,6 @@ nav a {
   font-weight: 200;
   margin: 40px 0px 20px 80px;
   color: #ddc398;
-
-}
-
-.arrivals h1{
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  transform-origin:center;
-  text-align: right;
-}
-
-.arrivals h6{
-  font-family: "Gothic";
-  transform: rotate(0deg);
-  writing-mode: vertical-rl;
-  transform-origin:center;
-  text-align: right;
 }
 
 .arrivals h1 a,
@@ -270,12 +308,15 @@ nav a {
 /* ------Products Corousel---- */
 
 
-.owl-carousel {
+.owl-carousel{
   width: 100%;
   max-width: 1500px;
 }
 
-.owl-carousel .item {
+.owl-carousel  .item{
+  position: relative;
+}
+.owl-carousel  .rev{
   position: relative;
 }
 
@@ -295,53 +336,32 @@ nav a {
 }
 
 
-/* section */
+/* Curated shopping experience */
 
-
-.section1{
-  background: #ddc398;
-  height: 500px;
-  align-content: center;
-  padding: 40px;
-  margin-top: 40px;
-  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
-  
-}
-.section1 h1{
-  font-family: "fontspring";
-  margin-left: 50px;
-  color: #141312;
-  font-size: 3em;
-}
-
-.section1 p{
-  width: 50%;
-  text-wrap: 40px;
-  overflow-wrap: break-word;
-  margin: 20px 0 0 50px;
-  font-family: "Gothic";
-  font-size: 1.1em;
-}
-.section1 a{
-  color: #141312;
-  text-decoration: none;
-}
-
-.section1 a:hover{
-  color: #141312;
-  text-decoration: none;
-  cursor:pointer;
-}
-
-.heading-combo{
+.roadmap{
+  background-color: #ddc398;
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  padding: 40px ;
+  margin-bottom: 40px;
+  align-content: center;
+  text-align: center;
 }
-.section1 img{
-  width: 50px;
+
+.roadmap h1{
+  font-family: "Gardena";
+  font-size: 2.5em;
+  font-weight: 200;
 }
 
 
+
+.roadmap img{
+  width:60%;
+  height: auto;
+  margin-top: 3em;
+  align-self: center;
+}
 
 
 /* Collection */
@@ -404,44 +424,156 @@ nav a {
 }
 
 
-.item-01 {
+.collection-1 {
   grid-column: span 1;
   grid-row: span 8 ;
 }
 
-.item-02 {
+.collection-2 {
   grid-column: span 2;
   grid-row: span 6;
 }
 
-.item-03 {
+.collection-3 {
   grid-column: span 1;
   grid-row: span 8;
 }
 
-.item-04 {
+.collection-4{
   grid-column: span 1;
   grid-row: span 5;
 }
 
-.item-05 {
+.collection-5 {
   grid-column: span 1;
   grid-row: span 6;
 }
-.item-06 {
+.collection-6 {
   grid-column: span 1;
   grid-row: span 8;
 }
-.item-07{
+.collection-7{
   grid-column: span 2;
   grid-row: span 5;
 }
 
 
+/* section */
 
 
+.section1{
+  background: #ddc398;
+  height: 500px;
+  align-content: center;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
   
+}
+.section1 h1{
+  font-family: "fontspring";
+  margin-left: 50px;
+  color: #141312;
+  font-size: 3em;
+}
+
+.section1 p{
+  width: 50%;
+  text-wrap: 40px;
+  overflow-wrap: break-word;
+  margin: 20px 0 0 50px;
+  font-family: "Gothic";
+  font-size: 1.1em;
+}
+.section1 a{
+  color: #141312;
+  text-decoration: none;
+}
+
+.section1 a:hover{
+  color: #141312;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.heading-combo{
+  display: flex;
+  align-items: baseline;
+}
+.section1 img{
+  width: 50px;
+}
+
+
+
+/* Blogs */
+.blogs{
+  width: 80%;
+  margin: 50px auto;
+}
+
+.blogs> .headings{
+  display: flex;
+  flex-direction: row;
+  font-family: "Gardena";
+  color: #ddc398;
+  justify-content: space-between;
+  font-size:2em ;
+ 
+}
+.headings h1{
+  margin-bottom: 0px;
+  align-content: center;
+
+}
+
+.headings button{
+  background-color: transparent;
+  color: #ddc398;
+  padding: 2px -4px 2px 2px;
+  font-size: 0.8em; 
+  width: 3em; 
+  height: 1.5em; 
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.headings button:hover{
+  box-shadow: 0px 0px 2px #ddc398;
+}
+
+.blogs-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0px;
+  font-family: "gothic", sans-serif;
+}
+
+.posters{
+  max-width: 40%;
+  margin: 10px 20px;
+}
+
+.posters img{
+  max-width: 100%;
+ 
+}
+
+
+
+.posters h4{
+  color: #ddc398;
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  padding: 10px;
+  min-height: 4em;
   
+} 
+
   
 
 
@@ -504,36 +636,7 @@ nav a {
 
 
 
-
-
-.section1{
-  background: #ddc398;
-  height: max-content;
-  align-content: center;
-  padding: 40px;
-  margin-top: 40px;
-  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
-  
-}
-.section1 h1{
-  margin:auto 8px ;
-  font-size: 1.4em;
-}
-
-.section1 p{
-  width: 80%;
-  overflow-wrap:break-word;
-  text-align: justify;
-  margin: 10px 8px ;
-  font-size: 0.8em;
-  margin-bottom: 2px;
-}
-
-
-.section1 img{
-  width: 1.5em;
-}
-
+/* Arrival */
 
 .arrivals h1 {
   font-size: 0.5em;
@@ -580,6 +683,20 @@ nav a {
 
 
 
+/* Curated */
+
+
+
+.roadmap h1{
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.roadmap img{
+  width:100%;
+  margin-top: 1em;
+}
+
 .collection-container {
   margin-bottom: -200px;
   width: 90%;
@@ -597,28 +714,88 @@ nav a {
 .heading{ 
   min-height:10%;
   position: absolute;
-  padding: 20px  0 0 0 ;
-  font-size: 0.5em;
+  padding: 20px  0 2px  0 ;
+  font-size: 1.1em;
   font-weight: 500;
 }
+
+
+
+/* Why us */
+.section1{
+  height: max-content;
+  align-content: center;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
+  
+}
+.section1 h1{
+  margin:auto 8px ;
+  font-size: 1.4em;
+}
+
+.section1 p{
+  width: 80%;
+  overflow-wrap:break-word;
+  text-align: justify;
+  margin: 10px 8px ;
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}
+
+
+
+
+.blogs{
+  width: 90%;
+  
+}
+.blogs .headings{
+  font-size: 1em;
+}
+.blogs h1{
+  font-size:1.2em ; 
+}
+
+.blogs-container{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.posters{
+  max-width: 30%;
+}
+ 
+.posters h4{
+  color: #ddc398;
+  font-size: 0.8em; 
+} 
+
+
 }
 
 
 /* FOOTER */
 
+.footer, .push {
+  height: 100px; /* Adjust this value to match the margin-bottom value in .wrapper */
+}
+
 .footer {
-  position: relative;
+  position: sticky;
   width: 100%;
+  height: fit-content;
   background: #ddc398;
-  min-height: 100px;
-  margin-top: 10px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "gothic", sans-serif;
- 
 }
 
 .social-icon,
@@ -646,7 +823,7 @@ nav a {
 
 .social-icon__link:hover {
   color: #141312;
-  transform: translateY(-10px);
+  transform: translateY(-1px);
 }
 
 .menu__link {
@@ -671,3 +848,12 @@ nav a {
   font-size: 1rem;
   font-weight: 300;
 }
+
+
+
+
+
+
+
+
+
