@@ -43,4 +43,31 @@ $(document).ready(function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+  dropdownButtons.forEach(button => {
+      button.addEventListener("click", function() {
+          const parentItem = this.parentElement;
+          const isActive = parentItem.classList.contains("active");
+
+          document.querySelectorAll(".dropdown-item").forEach(item => {
+              item.classList.remove("active");
+          });
+
+          if (!isActive) {
+              parentItem.classList.add("active");
+          }
+      });
+  });
+});
+
+
+
+
+
+
+
+
+
 
