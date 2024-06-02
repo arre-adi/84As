@@ -343,7 +343,7 @@ nav a {
   display: flex;
   flex-direction: column;
   padding: 40px ;
-  margin-bottom: 40px;
+  margin-top: 70px;
   align-content: center;
   text-align: center;
 }
@@ -371,14 +371,14 @@ nav a {
   flex-direction: column;
   min-height: fit-content;
   width: 90%;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 30% );
-  grid-template-rows: repeat(19, 5vh);
+  grid-template-rows: repeat(19,2em);
   gap: 16px;
   justify-content: center;
   align-content: center;
@@ -638,8 +638,12 @@ nav a {
 
 /* Arrival */
 
+.arrival-h{
+  height: 25%;
+}
+
 .arrivals h1 {
-  font-size: 0.5em;
+  font-size: 0.4em;
   padding: 0px;
 }
 
@@ -681,29 +685,51 @@ nav a {
   font-size: 0.6em;
 }
 
+.owl-carousel .owl-dots .owl-dot span {
+  display: none; 
+  border-radius: 0px;
+  width: 0px;
+  height: 0px;
+}
+
 
 
 /* Curated */
 
 
-
+.roadmap{
+  margin-top: -1em;
+  padding: 20px ;
+}
 .roadmap h1{
-  font-size: 1em;
+  font-size:0.8em;
   font-weight: 200;
 }
 
 .roadmap img{
-  width:100%;
+  width:120%;
   margin-top: 1em;
+  padding: 0 40px ;
 }
 
+
+/* collection */
 .collection-container {
   margin-bottom: -200px;
   width: 90%;
 }
 
+.collection-container h1 {
+  position: absolute;
+  font-size: 1.5em;
+  font-family: "gardena";
+  font-weight: 200;
+  margin: 0px;
+  color: #ddc398;
+}
+
 .grid {
-  margin-top: 0px;
+  margin-top: -200px;
   display: grid;
   grid-template-columns: repeat(3, 30% );
   grid-template-rows: repeat(19,0.5%);
@@ -721,14 +747,13 @@ nav a {
 
 
 
-/* Why us */
+/* WHY US */
 .section1{
   height: max-content;
   align-content: center;
   padding: 40px;
   margin-top: 40px;
-  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);
-  
+  box-shadow: 0px -1px 10px rgba(255, 255, 255, 0.5);  
 }
 .section1 h1{
   margin:auto 8px ;
