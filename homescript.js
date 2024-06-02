@@ -24,13 +24,13 @@ $(document).ready(function () {
 
         responsive: {
             0: {
-              items: 2.7  // 2 items on small screens
+              items: 3  // 2 items on small screens
             },
             768: {
-              items: 3.5  // 3 items on medium screens
+              items: 4  // 3 items on medium screens
             },
             1200: {
-              items: 3.6 // 4 items on large screens (adjust if needed)
+              items: 4 // 4 items on large screens (adjust if needed)
             }
           }
           
