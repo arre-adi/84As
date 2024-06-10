@@ -42,25 +42,77 @@ $(document).ready(function () {
 
 
 
+$(document).ready(function () {
+  var owl = $(".owl-carousel-2"); // Define the owl variable
 
-document.addEventListener("DOMContentLoaded", function() {
-  const dropdownButtons = document.querySelectorAll(".dropdown-button");
+  owl.owlCarousel({
+      dots: true, 
+      loop: false,
+      // Basic Speeds
+      slideSpeed: 500,
+      paginationSpeed: 500,
 
-  dropdownButtons.forEach(button => {
-      button.addEventListener("click", function() {
-          const parentItem = this.parentElement;
-          const isActive = parentItem.classList.contains("active");
+      // Autoplay
+      autoplay: false,
+      goToFirst: false,
+      goToFirstSpeed: 500,
 
-          document.querySelectorAll(".dropdown-item").forEach(item => {
-              item.classList.remove("active");
-          });
+      // Navigation
+      navigation: true,
+      navigationText: ["prev", "next"],
+      pagination: true,
+      paginationNumbers: false,
 
-          if (!isActive) {
-              parentItem.classList.add("active");
+
+      dotsEach: 1, 
+
+      responsive: {
+          0: {
+            items: 2.5  // 2 items on small screens
+          },
+          768: {
+            items: 4  // 3 items on medium screens
+          },
+          1200: {
+            items: 5 // 4 items on large screens (adjust if needed)
+          }
+        }
+        
+   
+  });
+
+
+});
+
+
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isOpen = faqItem.classList.contains('open');
+      
+      document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+              item.classList.remove('open');
+              item.querySelector('.faq-answer').style.maxHeight = null;
           }
       });
+      
+      if (!isOpen) {
+          faqItem.classList.add('open');
+          const answer = faqItem.querySelector('.faq-answer');
+          answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+          faqItem.classList.remove('open');
+          faqItem.querySelector('.faq-answer').style.maxHeight = null;
+      }
   });
 });
+
+
+
+
+
 
 
 
