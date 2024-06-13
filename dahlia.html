@@ -11,7 +11,7 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="dahlia.css">
+  <link rel="stylesheet" href="product-detail.css">
 </head>
 
 <body>
@@ -82,17 +82,11 @@
   <section>
     <div class="container">
       <div class="left">
-        <img src="srcs/products/dahlia/20240606_113647.jpg" class="slide">
-        <div class="option">
-          <img src="srcs/products/dahlia/20240606_113647.jpg" onclick="img('srcs/products/dahlia/20240606_113647.jpg')">
-          <img src="srcs/products/dahlia/20240606_113653.jpg" onclick="img('srcs/products/dahlia/20240606_113653.jpg')">
-          <img src="srcs/products/dahlia/20240606_113740.jpg" onclick="img('srcs/products/dahlia/20240606_113740.jpg')">
-        </div>
+        <img src="srcs/products/dahlia/IMG_E2190.JPG" class="slide">
       </div>
       <div class="right">
-        <h1>PASTEL VASE</h1>
+        <h1>Dahlia Pot</h1>
         <div class="w-code">
-          PT-8455
         </div>
         <div class="price-box">
           <h3>₹299 <p1>₹699</p1>
@@ -102,29 +96,29 @@
         <h4>COLOR<br></h4>
         <div class="color-option">
           <label>
-            <input type="radio" name="color" value="lavender" data-img-src="srcs/IMG_E2193.JPG">
-            <span class="lavender" onclick="img('srcs/IMG_E2193.JPG')"></span>
+            <input type="radio" name="color" value="lavender" data-color="lavender" data-img-src="srcs/products/dahlia/IMG_E2190.JPG">
+            <span class="lavender" onclick="img('srcs/products/dahlia/IMG_E2190.JPG')" title="lavender"></span>
           </label>
           <label>
-            <input type="radio" name="color" value="white"  data-img-src="srcs/IMG_E2198.JPG">
-            <span class="white" onclick="img('srcs/IMG_2198.JPG')"></span>
+            <input type="radio" name="color" value="white" data-color="white"  data-img-src="srcs/products/dahlia/IMG_E2198.JPG">
+            <span class="white" onclick="img('srcs/products/dahlia/IMG_E2198.JPG')" title="white"></span>
           </label>
           <label>
-            <input type="radio" name="color" value="mint" id="mintRadio">
-            <span class="mint"></span>
+            <input type="radio" name="color" value="mint" data-color="mint" data-img-src="srcs/products/dahlia/IMG_E2195.JPG">
+            <span class="mint" onclick="img('srcs/products/dahlia/IMG_E2195.JPG')" title="mint"></span>
           </label>
           
           <label>
-            <input type="radio" name="color" value="wine"  data-img-src="srcs/IMG_E2194.JPG">
-            <span class="wine" onclick="img('srcs/IMG_E2194.JPG')"></span>
+            <input type="radio" name="color" value="wine" data-color="wine" data-img-src="srcs/products/dahlia/IMG_E2194.JPG">
+            <span class="wine" onclick="img('srcs/products/dahlia/IMG_E2194.JPG')" title="wine"></span>
           </label>
           <label>
-            <input type="radio" name="color" value="pink"  data-img-src="srcs/IMG_2197.JPG">
-            <span class="pink" onclick="img('srcs/IMG_2197.JPG')"></span>
+            <input type="radio" name="color" value="pink" data-color="pink" data-img-src="srcs/products/dahlia/IMG_E2197.JPG">
+            <span class="pink" onclick="img('srcs/products/dahlia/IMG_E2197.JPG')" title="pink"></span>
           </label>
           <label>
-            <input type="radio" name="color" value="blue"  data-img-src="srcs/IMG_E2196.JPG">
-            <span class="blue" onclick="img('srcs/IMG_E2196.JPG')"></span>
+            <input type="radio" name="color" value="blue"  data-color="blue" data-img-src="srcs/products/dahlia/IMG_E2196.JPG" >
+            <span class="blue" onclick="img('srcs/products/dahlia/IMG_E2196.JPG')" title="blue"></span>
           </label>
         </div>
         <div class="add-to-cart">
@@ -164,84 +158,7 @@
   </footer>
   
 
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
-
-    function change(change) {
-      const line = document.querySelector('.home');
-      line.style.background = change;
-    }
-
-    document.getElementById('add-to-cart').addEventListener('click', function() {
-  const quantity = document.getElementById('quantity').value;
-  const selectedColor = document.querySelector('input[name="color"]:checked');
-  const color = selectedColor.value;
-  const imgSrc = selectedColor.getAttribute('data-img-src'); // Capture the image source
-  const product = {
-    imgSrc: imgSrc, // Include the imgSrc property
-    quantity: quantity,
-    color: color,
-    price: 299
-  };
-
-  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-
-  window.location.href = 'cart.html';
-});
-
-function updateImage(selectedColor) {
-  // Get references to elements
-  const leftImage = document.querySelector('.left img.slide');
-  const optionDiv = document.querySelector('.option');
-
-  // Clear existing option images (optional, depending on behavior)
-  optionDiv.innerHTML = ''; // Clear entire content of .option div
-
-  // Update main image based on selected color
-  leftImage.src = `srcs/${selectedColor}.jpg`;
-
-  // Get image data for selected color
-  const colorData = {
-    lavender: ['srcs/IMG_E2243.JPG', 'srcs/IMG_2246.JPG', 'srcs/IMG_2244.JPG', 'srcs/IMG_2246.JPG'],
-    white: ['srcs/IMG_E2243.JPG', 'srcs/IMG_2246.JPG', 'srcs/IMG_2244.JPG', ],
-    wine: ['srcs/IMG_E2194_1.JPG', 'srcs/IMG_E2194_2.JPG', 'srcs/IMG_E2194_3.JPG', 'srcs/IMG_E2194_4.JPG'],
-    pink: ['srcs/IMG_2197_1.JPG', 'srcs/IMG_2197_2.JPG', 'srcs/IMG_2197_3.JPG', 'srcs/IMG_2197_4.JPG'],
-    blue: ['srcs/IMG_E2196_1.JPG', 'srcs/IMG_E2196_2.JPG', 'srcs/IMG_E2196_3.JPG', 'srcs/IMG_E2196_4.JPG'],
-  };
-
-  // Create and add new option images
-  const newImages = colorData[selectedColor].map(src => {
-    const newImg = document.createElement('img');
-    newImg.src = src;
-    newImg.onclick = () => updateImage(selectedColor); // Update on click (optional for individual image selection)
-    return newImg;
-  });
-
-  optionDiv.append(...newImages); // Add new images in bulk
-}
-
-// Add event listeners to radio buttons
-const radioButtons = document.querySelectorAll('.color-option input[type="radio"]');
-radioButtons.forEach(radio => {
-  radio.addEventListener('change', () => {
-    if (radio.checked) {
-      const selectedColor = radio.value;
-      updateImage(selectedColor);
-    }
-  });
-});
-
-// Optional Initial Setup (if specific image needs to be loaded on page load)
-const initialColor = 'lavender'; // Or any default color
-updateImage(initialColor);
-
-
-
-  </script>
+  <script src="product-detail.js"> </script>
 </body>
 
 </html>

@@ -373,6 +373,7 @@ nav a {
 }
 
 .collection-container .item{
+  font-family: "gardena";
   margin: 1em;
   padding: 0em;
   transition: background-color 0.8s ease, color 0.5s ease; /* Add the transition property */
@@ -738,6 +739,7 @@ nav a {
   margin: 10px 0;
 }
 
+
 .arrivals h1 a,
 .collection-container h1 a {
   font-size: 2.5em;
@@ -761,19 +763,32 @@ nav a {
   box-shadow: none;
   border: none;
 }
-
+.item h4{
+  font-size: small;
+}
 
 .arrivals h6 {
   font-size: 0.6em;
 }
 
 .owl-carousel .owl-dots .owl-dot span {
-  display: none; 
+  display: block; 
   border-radius: 0px;
   width: 0px;
   height: 0px;
 }
 
+.owl-theme .owl-nav.disabled+.owl-dots{
+  margin: 0px;
+}
+.owl-carousel-2 .owl-dots .owl-dot span {
+  display: block;
+  padding: 2px;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
 
 
 /* Curated */
@@ -799,6 +814,9 @@ nav a {
 .collection-container {
   width: 80%;
   margin: 1em auto;
+}
+.collection-container h4{
+ font-size: small; 
 }
 
 
