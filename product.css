@@ -149,7 +149,7 @@ background-color: #b1efbb;
 
 @media (max-width: 450px) {
   .product-container {
-    width: 80%;
+    width: 100%;
     /* Make container full width on small screens */
     margin: 2px auto;
     /* Maintain horizontal centering */
@@ -158,12 +158,12 @@ background-color: #b1efbb;
   }
 
   .product {
-    max-width: 9em;
+    max-width: 9.5em;
     padding: 1em;
   }
 
   .product h4 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .product div {

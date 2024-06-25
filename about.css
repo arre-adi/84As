@@ -1,0 +1,200 @@
+.section2{
+    background: #ddc398;
+    height: fit-content;
+    align-content: center;
+    padding: 40px;
+    
+  }
+  .section2 h1{
+    font-family: "gardena";
+    margin-right: 2%;
+    margin-left: 5%;
+    color: #141312;
+    font-size: 2.5em;
+    font-weight: 500;
+  }
+  
+  .section2 p{
+    color: #141312;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 1%;
+    text-wrap: 40px;
+    overflow-wrap: break-word;
+    font-family: "Gothic";
+    font-size: 1.1em;
+    line-height: 2em  ;
+  }
+
+  .heading-combo{
+    display: flex;
+    align-items: baseline;
+  }
+  .section2 img{
+    width: 50px;
+  }
+
+
+
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: #ddc398;
+}
+
+.mobile-left{
+    display: none;
+}
+.left,.right{
+    width:40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    text-align: center;
+    justify-content: center;
+    font-size: 4em;
+    margin-top: 80px;
+    padding: 40px;
+    font-family: "gardena" ,sans-serif;
+    font-weight: 100;
+    color: #141312;
+    height: 500px;
+}
+
+.left h1{
+    text-align: left;
+    font-weight: 100;
+}
+.left h2{
+    font-weight: 100;
+}
+
+.right{
+    align-items:flex-start;
+    font-family: "Gothic" ,sans-serif;
+}
+.form-container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    
+}
+
+.form-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #141312;
+    padding: 10px;
+    margin: 20px;
+    color: #141312;
+    width: 200px;
+
+}
+
+
+
+.submit-btn{
+    background-color: #141312;
+    color: #ddc398;
+    border-color: #141312;
+    margin-top: 80px;
+    margin-left: 60%;
+    font-size: 30px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius:100px;
+    cursor: pointer;
+    box-shadow: none;
+    border:none;
+    box-shadow: 0px 0px 2px #141312; /* Add shadow effect */
+   
+}
+
+  
+
+@media (max-width: 450px) {
+    .section2{
+        height: max-content;
+        align-content: center;
+        padding: 40px;
+        margin-top: 0px;
+      }
+      .section2 h1{
+        margin:auto 8px ;
+        font-size: 1.2em;
+      }
+      
+      .section2 p{
+        width: 80%;
+        overflow-wrap:break-word;
+        text-align: justify;
+        margin: 10px 8px ;
+        font-size: 0.8em;
+        margin-bottom: 2px;
+      }
+
+
+      .container{
+        flex-direction: column;
+    }
+
+    .left{
+       display: none;
+    }
+
+    .mobile-left {
+        display: block;
+        text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    margin: 8px auto;
+    padding:  10px 0 0 0 ;
+    font-family: "gardena" ,sans-serif;
+    color: #141312;
+    }
+
+    .mobile-left h5{
+        font-weight: 100;
+    }
+
+
+    .right{
+        align-items:center;
+        margin: 10px auto;
+    }
+    .form-container{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        
+    }
+    
+    .form-input{
+        border-bottom: 1px solid #141312;
+        padding: 10px;
+        margin: 20px;
+        color: #141312;
+        min-width: 20em;
+    
+    }
+    
+    
+    
+    .submit-btn{
+        align-self: flex-end;
+        margin-top: 20px;
+        margin-left: 90%;
+        margin-right: 0%;
+        font-size: 20px;
+       
+    }
+    
+      
+    }
+    
