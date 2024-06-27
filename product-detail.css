@@ -209,11 +209,44 @@ background-color: #497183;
   background-color: #a1d020
 }
 
+.s_blue{
+  background-color: #4e87c9;
+}
+
 .br-blue{
   background-color: #4C96E1;
 }
 .puce-pink{
   background-color: #c87c99;
+}
+
+.mettwurst{
+  background-color: #e26b5f;
+}
+
+.cr_red{
+  background-color: #c71b24;
+}
+
+.whispher{
+background-color: #e3efc0;
+}
+.s_pink{
+  background-color: #e6978c;
+}
+
+.golden_t{
+  background-color: #e8c87d;
+}
+.brown{
+  background-color: rgb(58, 14, 14);
+}
+
+.l_brown{
+  background-color: rgb(213, 147, 85);
+}
+.orange{
+  background-color: orangered;
 }
 span[title] {
   position: relative;

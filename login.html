@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="srcs/full logo black no bg.png" alt="Logo">
+            <p>where beauty finds home</p>
+        </div>
+        <div class="right-panel">
+            <div class="form-header">
+                <button id="login-toggle" class="active">SIGN IN</button>
+                <button id="signup-toggle">SIGN UP</button>
+            </div>
+            <div class="form-container" id="login-form">
+                <input type="text" placeholder="enter phone number" id="login-phone-email">
+                <input type="password" placeholder="enter password" id="login-password">
+                <button id="login-button">LOG IN</button>
+                <p>OR</p>
+                <button class="google-button">SIGN IN WITH GOOGLE</button>
+            </div>
+            <div class="form-container" id="signup-form" style="display: none;">
+                <input type="text" placeholder="enter phone number" id="signup-phone">
+                <input type="password" placeholder="enter password" id="signup-password">
+                <input type="password" placeholder="confirm password" id="signup-confirm-password">
+                <button id="signup-button">SIGN UP</button>
+                <p>OR</p>
+                <button class="google-button">SIGN UP WITH GOOGLE</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-toggle').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'flex';
+            document.getElementById('signup-form').style.display = 'none';
+            this.classList.add('active');
+            document.getElementById('signup-toggle').classList.remove('active');
+        });
+
+        document.getElementById('signup-toggle').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'flex';
+            this.classList.add('active');
+            document.getElementById('login-toggle').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

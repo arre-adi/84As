@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'gardena';
+    src: url(srcs/fontz/gardena-holmes-gardena-holmes-serif-400.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Gothic';
+    src: url(srcs/fontz/Century\ Gothic\ Std\ Regular.otf) format('truetype');
+  }
+  
+  @font-face{
+    font-family: 'fontspring';
+    src: url(srcs/fontz/Fontspring-DEMO-theseasons-bd.otf) format('truetype')
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ddc398;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.left-panel, .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left-panel {
+    color: #141312;
+    text-align: center;
+}
+.right-panel {
+    color: #141312;
+    text-align: center;
+    font-family: 'Gothic';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #141312;
+}
+.form-container {
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Gothic';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #141312;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: 'Gothic';
+
+}
+.form-container button {
+    padding: 10px;
+    width: 100%;
+    background-color: #141312;
+    color: #ddc398;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Gothic';
+
+}
+.form-container .google-button {
+    background-color: #141312;
+    color: #ddc398;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Gothic';
+
+}
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-family: 'Gothic';
+    margin-bottom: 10%;
+
+}
+.form-header button {
+    background-color: transparent;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 5px;
+    width: 120px;
+    font-family: 'Gothic';
+
+}
+.form-header button.active {
+    background-color: #141312;
+    color: #ddc398;
+    font-family: 'Gothic';
+}
+.left-panel img {
+    width: 60%;
+    margin: 20px 0;
+}
+.left-panel p {
+    font-size: 20px;
+    margin: 10px 0;
+}

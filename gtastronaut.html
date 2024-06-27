@@ -100,13 +100,13 @@
                 <h4>COLOR<br></h4>
                 <div class="color-option">
                     <label>
-                        <input type="radio" name="color" value="love" data-img-src="" data-color="love" checked>
-                        <span class="love" title="love"></span>
+                        <input type="radio" name="color" value="pink" data-img-src="srcs/products/gypso-tree/20240610_133049.jpg" data-color="pink" checked>
+                        <span class="pink" title="pink"></span>
                     </label>
 
                     <label>
-                        <input type="radio" name="color" value="violin" data-img-src="" data-color="violin">
-                        <span class="violin" title="violin"></span>
+                        <input type="radio" name="color" value="brown" data-img-src="srcs/products/gypso-tree/20240610_133134.jpg   " data-color="brown">
+                        <span class="brown" title="brown"></span>
                     </label>
 
 
@@ -158,8 +158,8 @@
             const leftImage = document.querySelector('.left img.slide');
             const optionDiv = document.querySelector('.option');
             const colorData = {
-                love: ['srcs/products/gypso-tree/20240610_133049.jpg','srcs/products/gypso-tree/20240610_133107.jpg', 'srcs/products/gypso-tree/20240622_122632.jpg','srcs/products/gypso-tree/20240610_124229.jpg', 'srcs/products/gypso-tree/20240610_124219.jpg'],
-                violin: ['srcs/products/gypso-tree/20240610_133125.jpg','srcs/products/gypso-tree/20240610_133134.jpg', 'srcs/products/gypso-tree/20240622_122632.jpg','srcs/products/gypso-tree/20240610_124229.jpg', 'srcs/products/gypso-tree/20240610_124219.jpg'],
+                pink: ['srcs/products/gypso-tree/20240610_133049.jpg','srcs/products/gypso-tree/20240610_133107.jpg', 'srcs/products/gypso-tree/20240622_122632.jpg','srcs/products/gypso-tree/20240610_124229.jpg', 'srcs/products/gypso-tree/20240610_124219.jpg'],
+                brown: ['srcs/products/gypso-tree/20240610_133125.jpg','srcs/products/gypso-tree/20240610_133134.jpg', 'srcs/products/gypso-tree/20240622_122632.jpg','srcs/products/gypso-tree/20240610_124229.jpg', 'srcs/products/gypso-tree/20240610_124219.jpg'],
             };
 
 
@@ -189,7 +189,7 @@
             if (initialColor) {
                 updateImage(initialColor.value);
             } else {
-                const defaultColor = 'violin';
+                const defaultColor = 'brown';
                 document.querySelector(`.color-option input[value="${defaultColor}"]`).checked = true;
                 updateImage(defaultColor);
             }
