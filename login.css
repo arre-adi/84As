@@ -32,6 +32,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
+
 .left-panel, .right-panel {
     flex: 1;
     display: flex;
@@ -42,6 +43,11 @@ body {
 .left-panel {
     color: #141312;
     text-align: center;
+}
+.left-panel p{
+    font-family: 'fontspring';
+    margin:0;
+    font-size: 1.5em;
 }
 .right-panel {
     color: #141312;
@@ -65,13 +71,18 @@ body {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #141312;
-    border-radius: 5px;
+    border-left:none ;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #141312;
+    border-radius: 0px;
     font-size: 16px;
     background-color: transparent;
     font-family: 'Gothic';
+    outline: none; 
 
 }
+
 .form-container button {
     padding: 10px;
     width: 100%;
@@ -125,7 +136,54 @@ body {
     width: 60%;
     margin: 20px 0;
 }
-.left-panel p {
-    font-size: 20px;
-    margin: 10px 0;
+
+
+  
+  .form-container input:focus {
+    border-color: #141312; 
+  }
+@media (max-width: 450px) {
+    .container {
+        margin: 80px auto;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left-panel p{
+        font-family: 'fontspring';
+        margin:0;
+        font-size: 1em;
+    }
+
+    .right-panel{
+        border-left: none;
+    }
+
+    .form-container button {
+        padding: 10px;
+        width: 80%;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Gothic';
+    
+    }
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .form-header button {
+        border-radius: 12px;
+        border: none;
+        font-size: 15px;
+        margin: 5px;
+        font-family: 'Gothic';
+    
+    }
 }
