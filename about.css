@@ -1,5 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( #fff8ec, #fbf3e6, #f7efe1, #f4eadb, #f0e6d6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Gothic";
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
 .section2{
-    background: #ddc398;
     height: fit-content;
     align-content: center;
     padding: 40px;
@@ -41,7 +67,6 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    background-color: #ddc398;
 }
 
 .mobile-left{
@@ -100,7 +125,7 @@
 
 .submit-btn{
     background-color: #141312;
-    color: #ddc398;
+    color: #fff;
     border-color: #141312;
     margin-top: 80px;
     margin-left: 60%;
