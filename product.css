@@ -145,11 +145,122 @@ background-color: #ffffff;
 background-color: #b1efbb;
 }
 
+.brown{
+  background-color: rgb(58, 14, 14);
+}
+.orange{
+  background-color: orangered;
+}
+.l_brown{
+  background-color: rgb(213, 147, 85);
+}
+.yellow {
+  background-color: #e1b84d;
+}
+
+.blue_cream {
+  background: conic-gradient(from 180deg, #f3ddcb 50%, #bcc8cb 50%);
+}
+
+.maroon_cream {
+  background: conic-gradient(from 180deg, #66171f 50%, #dfdad5 50%);
+}
+
+.maroon_peach {
+  background: conic-gradient(from 180deg, #66171f 50%, #db9b92 50%);
+}
+
+.maroon_pink {
+  background: conic-gradient(from 180deg, #66171f 50%, #d87571 50%);
+}
+
+.maroon_yel {
+  background: conic-gradient(from 180deg, #66171f 50%, #c19d68 50%);
+}
+
+.peach_white {
+  background: conic-gradient(from 180deg, #db9b92 50%, #ffffff 50%);
+}
+
+.pink_white {
+  background: conic-gradient(from 180deg, #d87571 50%, #ffffff 50%);
+}
+
+.pink_yel {
+  background: conic-gradient(from 180deg, #d87571 50%, #c19d68 50%);
+}
+
+.purple_cream {
+  background: conic-gradient(from 180deg, #ae7891 50%, #f3ddcb 50%);
+}
+
+.dark_blue{
+  background-color: #282f50;
+}
+
+.c_red {
+  background-color:#883352 ;
+}
+
+.maroon{background-color: #991a2b;
+}
+
+.b_purple{
+  background-color: #ae7891;
+}
+
+.k_pink{
+  background-color: #E5A5C4;
+}
+
+.bis_blue{
+background-color: #497183;
+}
+.green{
+  background-color: #3DC199;
+}
+.d_pink{
+  background-color: #D94972;
+}
+.l_green{
+  background-color: #a1d020
+}
+
+.s_blue{
+  background-color: #4e87c9;
+}
+
+.br-blue{
+  background-color: #4C96E1;
+}
+.puce-pink{
+  background-color: #c87c99;
+}
+
+.mettwurst{
+  background-color: #e26b5f;
+}
+
+.cr_red{
+  background-color: #c71b24;
+}
+
+.whispher{
+background-color: #e3efc0;
+}
+.s_pink{
+  background-color: #e6978c;
+}
+
+.golden_t{
+  background-color: #e8c87d;
+}
+
 
 
 @media (max-width: 450px) {
   .product-container {
-    width: 80%;
+    width: 100%;
     /* Make container full width on small screens */
     margin: 2px auto;
     /* Maintain horizontal centering */
@@ -158,12 +269,12 @@ background-color: #b1efbb;
   }
 
   .product {
-    max-width: 9em;
+    max-width: 9.5em;
     padding: 1em;
   }
 
   .product h4 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .product div {
